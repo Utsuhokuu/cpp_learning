@@ -23,7 +23,7 @@ __doapl(complex* ths, const complex& r)
 {
 	ths->re += r.re;
 	ths->im += r.im;
-	return *this
+	return *ths
 }
 
 inline complex& 
@@ -31,6 +31,48 @@ complex::operator += (const complex& r)
 {
 	return __doapl (this, r);
 }
+
+inline complex&
+__doami(complex* ths, const complex& r)
+{
+	ths->re -= r.re;
+	ths->im -= r.im;
+	return *ths
+}
+
+inline complex& 
+complex::operator -= (const complex& r)
+{
+	return __doami (this, r);
+}
+
+
+
+inline complex&
+__doaml(complex* ths, const complex& r)
+{
+	ths->re *= r.re;
+	ths->im *= r.im;
+	return *ths
+}
+
+inline complex&
+__doaml(complex* ths, const complex& r)
+{
+	double f = 0.0;
+	f = ths->re + r.re;
+	ths->im -= r.im;
+	return *ths
+}
+
+inline complex& 
+complex::operator *= (const complex& r)
+{
+	return __doaml (this, r);
+}
+
+
+
 
 //把+操作符定义在类外，使得类可以应付复数加实数的情况，对- * /,同理 
 inline complex
