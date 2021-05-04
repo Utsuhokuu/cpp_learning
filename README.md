@@ -6,4 +6,4 @@
 一个模仿STL的复数类，以及测试代码
 
 ## Sales_data
-C++ Primer里的书店类
+C++ Primer里的书店类，以及测试代码
