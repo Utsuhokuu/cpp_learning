@@ -65,4 +65,4 @@ ostream& operator << (ostream& os, const String& str)
 	return os;	
 } 
 
-#endif
+#endif // __MY_STRING_H__ 
