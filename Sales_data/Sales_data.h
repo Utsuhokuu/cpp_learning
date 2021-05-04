@@ -1,5 +1,5 @@
-#ifndef SALES_DATA_H 
-#define SALES_DATA_H
+#ifndef __SALES_DATA_H__ 
+#define __SALES_DATA_H__
 #include <string>
 #include <iostream>
 
@@ -72,4 +72,4 @@ Sales_data::Sales_data(std::istream &is) {
  
  
 
-#endif
+#endif // __SALES_DATA_H__ 
