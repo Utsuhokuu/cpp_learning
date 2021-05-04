@@ -236,4 +236,14 @@ norm (const complex& x)
 	return real (x) * real (x) + imag (x) * imag (x);
 }
 
+#include <iostream>
+
+using namespace std;
+ 
+ostream&
+operator << (ostream& os, const complex& x)
+{
+	return os << '(' << real (x) << ',' << imag (x) << ')';
+}
+
 #endif  //__MY_COMPLEX_H__
